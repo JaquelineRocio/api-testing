@@ -4,7 +4,7 @@ const {
   deleteTask,
   createTask,
   updateTask,
-} = require('./task.service');
+} = require("./task.service");
 
 function handlerAllTask(req, res) {
   const tasks = getAllTask();
@@ -37,11 +37,11 @@ function handlerCreateTask(req, res) {
   const newTask = req.body;
 
   if (!newTask.title) {
-    res.status(400).json({ message: 'Title is required' });
+    res.status(400).json({ message: "Description is required" });
   }
 
   if (!newTask.description) {
-    res.status(400).json({ message: 'Description is required' });
+    res.status(400).json({ message: "Description is required" });
   }
 
   const task = createTask(newTask);
